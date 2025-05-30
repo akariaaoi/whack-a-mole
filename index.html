@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whac a Mole</title>
+    <title>Whac-A-Mole</title>
     <link rel="stylesheet" href="mole.css">
-    <script src="mole.js"></script>
+    <script src="mole.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Whac a Mole</h1>
-    <h2 id="score">0</h2>
-    <!-- 3x3 -->
-    <div id="board">
+    <h1 class="title">Whac-A-Mole</h1>
+
+    <!-- 開始畫面 -->
+    <div id="start-screen">
+        <button id="startBtn">Game Start</button>
     </div>
+
+    <!-- 遊戲資訊 -->
+    <div id="info" style="display: none;">
+        <h2 id="timer">Time: 40s</h2>
+        <h2 id="score">Score: 0</h2>
+    </div>
+
+    <!-- 遊戲區 -->
+    <div id="board" style="display: none;"></div>
+
+    <!-- 結束畫面與重新開始 -->
+    <div id="end-screen" style="display: none;">
+        <h2 id="finalScore">Final Score: 0</h2>
+        <button id="restartBtn">Restart</button>
+    </div>
+
+    <!-- 音效 -->
+    <audio id="hit-sound" src="./hit.mp3" preload="auto"></audio>
+    <audio id="miss-sound" src="./miss.mp3" preload="auto"></audio>
+    <audio id="gameover-sound" src="./gameover.mp3" preload="auto"></audio>
 </body>
 </html>
