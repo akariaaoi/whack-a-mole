@@ -1,7 +1,7 @@
 let currMoleTile;
 let currPlantTile;
 let score = 0;
-let timeLeft = 40;
+let timeLeft = 40; // 倒數時間設為 40 秒
 let gameOver = false;
 let moleInterval;
 let plantInterval;
@@ -58,7 +58,7 @@ function endGame() {
 
 function restartGame() {
     score = 0;
-    timeLeft = 60;
+    timeLeft = 40; // 重新開始也設為 40 秒
     gameOver = false;
     currMoleTile = null;
     currPlantTile = null;
